@@ -22,7 +22,6 @@ for i in m[::-1]:
     print(n * int(i))
 print(n * int(m))
 
-
 # 2 
 
 n = int(input())
