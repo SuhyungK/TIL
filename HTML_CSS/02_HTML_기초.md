@@ -117,5 +117,7 @@
 - HTML 문서에 대한 모델 구성
 - HTML 문서를 각 요소 별로 잘라서 각각 접근한 뒤 화면에 그려내는 것
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png></img>
+
+![1200px-DOM-model svg](https://user-images.githubusercontent.com/97926368/182071541-a3a8142c-aa70-44bd-8f50-57e19af577a4.png)
+
 
