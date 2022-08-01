@@ -1,3 +1,6 @@
+# 객체와 클래스 만들기
+
+
 class Dogs:
     nums_of_dogs = 0
     birth_of_dogs = 0
