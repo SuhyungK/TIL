@@ -22,3 +22,5 @@
 - `<pre>` : HTML 작성 내용 그대로 표현
 - `<blockquote>` : 텍스트가 긴 인용문
 - `<div></div>` : 작업을 위한 의미 없는 블록 컨테이너
+
+![1200px-DOM-model svg](https://user-images.githubusercontent.com/97926368/182071541-a3a8142c-aa70-44bd-8f50-57e19af577a4.png)
