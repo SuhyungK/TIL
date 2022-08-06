@@ -87,7 +87,7 @@
 - 역방향의 경우 HTML 태그 선언 순서와 시각적으로 다르니 유의
 - `row-reverse` : ~~최신글 설정할 때(가장 마지막 item이 상위 배치)~~
 
-![flex-direction.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/90739b71-2eec-49c9-bfaf-237d7ca91917/flex-direction.png)
+![flex-direction.png](images/flex-direction.png)
 
 ### flex-wrap
 
