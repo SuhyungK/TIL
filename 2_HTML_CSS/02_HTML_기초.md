@@ -44,7 +44,6 @@
 	<title></title>
 </head>
 ```
-
 - Open Graph Protocol (OG)
     - 링크의 썸네일을 결정하는 meta 태그
     - 메타 데이터를 표현하는 새로운 규약
@@ -99,7 +98,7 @@
 
 ## 시맨틱 태그
 
-- 의미를 가치를 가지는 태그
+- 의미의 가치를 가지는 태그
 - `h1` 태그는 이 페이지에서 최상위 제목인 텍스트를 감싸는 역할
 - Non semantic 요소로는 div, span이 있음
 - `<header>`, `<nav>`, `<section>`, `<footer>`, `<article>`
