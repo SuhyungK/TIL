@@ -125,7 +125,7 @@
 - `cross-axis` 기준
 - 컨텐츠가 여러 줄일때만 적용됨
 
-![align-content.png](images/align-content.PNG)
+![align-content.png](images/align-content.png)
 
 ## 정렬
 
@@ -158,7 +158,7 @@
 - `center`
 - `flex-end`
 
-![align-self.PNG](images/aling-self.png)
+![align-self.PNG](images/align-self.PNG)
 
 ### 기타 속성
 
