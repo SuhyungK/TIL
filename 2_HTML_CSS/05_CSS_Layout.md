@@ -125,7 +125,7 @@
 - `cross-axis` 기준
 - 컨텐츠가 여러 줄일때만 적용됨
 
-![align-content.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48fbdc20-6357-4a71-8cf8-ee10cfe82d96/align-content.png)
+![align-content.png](images/align-content.png)
 
 ## 정렬
 
@@ -141,7 +141,7 @@
 - `center` **: 가운데 줄로 정렬**
 - `baseline` : 글자 선을 기준으로 맞추기
 
-![align-items.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0fa41eeb-74f8-46e6-af29-c3cd17971e03/align-items.png)
+![align-items.PNG](images/align-items.png)
 
 > *The `align-items` property of flex-box aligns the items inside a flex container along the cross axis just like `justify-content` does along the main axis. (For the default `flex-direction: row` the cross axis corresponds to vertical and the main axis corresponds to horizontal. With `flex-direction: column` those two are interchanged respectively). But `align-content` is for multi line flexible boxes. It has no effect when items are in a single line. It aligns the whole structure according to its value.*
 > 
@@ -158,7 +158,7 @@
 - `center`
 - `flex-end`
 
-![align-self.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8c608b77-829d-4c43-9f43-9479ba5c552f/align-self.png)
+![align-self.PNG](images/aling-self.png)
 
 ### 기타 속성
 
@@ -167,7 +167,7 @@
     - *여백을 몰아주고 싶을 때 사용*
 - `order` : 배치순서변경
 
-![order-.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f54e085a-ae53-44f4-ae39-73f787ab080f/order-.png)
+![order-.PNG](images/order-.png)
 > `block` : 위에서 아래로 쌓이고 페이지 너비를 전부 차지하게 됨
 > 
 > 
