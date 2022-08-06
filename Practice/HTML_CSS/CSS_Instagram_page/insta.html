@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .profile-live img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    article img {
+      width: 380px;
+      height: 380px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <!-- 1. nav -->
+  <nav class="navbar navbar-expand bg-white border-bottom border-bottom-1">
+    <div class="container-fluid">
+      <!-- logo -->
+      <a href="instargram.com" class="navbar-brand">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="instagram" style="width:100px;">
+      </a>
+
+      <!-- search -->
+      <form role="search">
+        <input type="search" class="form-control bg-light" placeholder="Search" aria-label="Search">
+      </form>
+
+
+      <!-- sign up & sign in -->
+      <div>
+        <button type="button" class="btn btn-primary">Sign in</button>
+        <button type="button" class="btn btn-light text-primary">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header -->
+  <div class="container">
+    <header class="row">
+      <!-- profile -->
+      <div class="justify-content-start col-9 d-flex m-4">
+        <!-- profile img -->
+        <div style="width:180px;" class="me-5">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1025px-Instagram-Icon.png" alt="insta_logo" class="rounded-circle img-fluid p-1 img-thumbnail">
+        </div>
+        <div class="ms-5">
+          <!-- profile info -->
+          <p><h2>nickname</h2></p>
+          <p>
+            <span>Post</span>
+            <strong class="me-5">423</strong>
+            <span>Follower</span>
+            <strong class="me-5">53.2M</strong>
+          </p>
+          <p class="pt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> 
+            Neque quasi laboriosam minus iste quae placeat quo beatae, <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> 
+            Neque quasi laboriosam minus iste quae placeat quo beatae, <br>
+          </p>
+        </div>
+      </div>
+      <div class="profile-live justify-content-evenly col-4 mx-4 mb-4 d-flex " style="width:500px; position:relative; left:-60px;">
+        <div class="">
+          <img src="https://i.pinimg.com/736x/bd/59/14/bd5914df69a865b3f3169a36c8507005.jpg" alt="cat1" class="img-fluid img-thumbnail">
+          <p class="text-center mt-2"><b>ABC</b></p>
+        </div>
+        <div class="">
+          <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="insta_img1" class="img-fluid img-thumbnail">
+          <p class="text-center mt-2"><b>DEF</b></p>
+        </div>
+        <div class="">
+          <img src="https://350927.smushcdn.com/1388247/wp-content/uploads/2020/11/Unknown-Album-Cover-PP1.jpg?lossy=0&strip=1&webp=1" alt="album_cover1" class="img-fluid img-thumbnail">
+          <p class="text-center mt-2"><b>GHI</b></p>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- section -->
+  <div style="width:90%; margin:auto;">
+    <hr class="border border-1">
+
+    <!-- section menu -->
+    <div class="d-flex justify-content-center">
+      <a href="#" class="mx-5 text-decoration-none text-dark" style="position:relative; top:-33px;">
+        <hr class="border border-dark">
+        Post
+      </a>
+      <a href="#" class="mx-5 text-decoration-none text-secondary">Live</a>
+      <a href="#" class="mx-5 text-decoration-none text-secondary">Video</a>
+      <a href="#" class="mx-5 text-decoration-none text-secondary">Tagged</a>
+    </div>
+
+
+    <!-- article:grid -->
+    <article class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+      <div class="col mb-4">
+        <img src="https://graphicriver.img.customer.envatousercontent.com/files/365050809/deconstruct-lpvinyl-albumcover-template-preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=590&s=71b7184e52c6cc4201b33643cdf62fc3" alt="1" class="">
+      </div>
+      <div class="col mb-4">
+        <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/176510104/original/9e1c3c2bb5cbec609deb1bc727142e09064dd31b/professionally-design-your-album-cover-art-or-music-artwork.jpg" alt="2">
+      </div>
+      <div class="col mb-4">
+        <img src="https://www.udiscovermusic.com/wp-content/uploads/2017/08/Pink-Floyd-Dark-Side-Of-The-Moon.jpg" alt="1">
+      </div>
+      <div class="col mb-4">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/eb7e1f105276629.5f755994a90ff.png" alt="1">
+      </div>
+      <div class="col mb-4">
+        <img src="https://static-cse.canva.com/blob/902535/1600w-V9UBYLgLIcY.jpg" alt="1">
+      </div>
+      <div class="col mb-4">
+        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/pride-album-cover-art-design-template-d2bf21df8ead7742d0af24f0143097df_screen.jpg?ts=1596467888" alt="1">
+      </div>
+
+    </article>
+
+  </div>
+
+    
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

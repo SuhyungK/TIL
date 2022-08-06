@@ -1,0 +1,53 @@
+/* 여기에 코드를 작성합니다. */
+/* 모든 스타일은 반드시 클래스 선택자를 이용해 정의합니다. 
+이후 HTML 태그에 해당 클래스를 적용합니다. */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.chessboard {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  border: 2px solid black;
+  margin: auto;
+  font-size: 0;
+} 
+
+.line {
+  display: flex;
+}
+.line div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+.black {
+  background-color: black;
+}
+.white {
+  background-color: white;
+}
+
+.chessboard img {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+}
+.pawn {
+  background-image: url('../problem04/chess_img/black_pawn.png');
+  background-size: contain;
+}
+#king {
+  top: 700px;
+  left: 400px;
+}
+#queen {
+  top: 700px;
+  left: 300px;
+}
+#rook {
+  top: 700px;
+  left: 700px;
+}
