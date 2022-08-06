@@ -71,6 +71,8 @@
 > ***block :** `div` `h1` `p` `li` `section`*
 > 
 
+
+
 ## Flex 속성
 
 - 배치 설정 : `flex-direction`, `flex-wrap`
@@ -78,6 +80,7 @@
     - item을 넣고 남는 공간을 어떻게 나눌 것인가
     - 전체 공간에서 일정한 간격만큼 배치하려고 할 때 고려
 - 정렬 : `align-items`, `align-self`
+
 
 ## 배치 설정
 
@@ -103,6 +106,8 @@
 - 두 가지 설정 값을 차례로 작성
 - *ex : flex-flow : row nowrap*
 
+
+
 ## 공간배분
 
 - `flex-start`(디폴트) : 아이템들을 axis 시작점으로
@@ -127,6 +132,8 @@
 
 ![align-content.png](images/align-content.png)
 
+
+
 ## 정렬
 
 - `stretch` : 전체 높이에 맞춰 늘이기
@@ -149,7 +156,7 @@
 > ⇒ *`align-items` 는 `justify-content` 와 동일하게, 하지만 cross axis에서 동작.* 
 > 
 > ⇒ *`align-content` 도 cross axis 에서 동작하지만 축에 item이 여러 줄(multi line)일 때 동작.*
-> 
+>
 
 ### align-self
 
