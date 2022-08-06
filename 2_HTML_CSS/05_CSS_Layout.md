@@ -87,6 +87,8 @@
 - 역방향의 경우 HTML 태그 선언 순서와 시각적으로 다르니 유의
 - `row-reverse` : ~~최신글 설정할 때(가장 마지막 item이 상위 배치)~~
 
+![flex-direction.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/90739b71-2eec-49c9-bfaf-237d7ca91917/flex-direction.png)
+
 ### flex-wrap
 
 - 아이템이 컨테이너를 벗어나는 경우 해당 영역 내에 배치되도록 설정
@@ -116,12 +118,14 @@
 - 그림은 현재 메인축이 가로인 상태
 - `center` : 가운데 정렬
 
+![https://webdesign-trends.net/wp/wp-content/uploads/2020/03/justify-content-sample.png](https://webdesign-trends.net/wp/wp-content/uploads/2020/03/justify-content-sample.png)
+
 ### align-content
 
 - `cross-axis` 기준
 - 컨텐츠가 여러 줄일때만 적용됨
 
-![https://webdesign-trends.net/wp/wp-content/uploads/2020/03/justify-content-sample.png](https://webdesign-trends.net/wp/wp-content/uploads/2020/03/justify-content-sample.png)
+![align-content.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48fbdc20-6357-4a71-8cf8-ee10cfe82d96/align-content.png)
 
 ## 정렬
 
@@ -137,14 +141,7 @@
 - `center` **: 가운데 줄로 정렬**
 - `baseline` : 글자 선을 기준으로 맞추기
 
-### align-self
-
-- 개별 아이템을 `cross axis` 기준으로 정렬
-- `flex-start`
-- `center`
-- `flex-end`
-    
-    
+![align-items.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0fa41eeb-74f8-46e6-af29-c3cd17971e03/align-items.png)
 
 > *The `align-items` property of flex-box aligns the items inside a flex container along the cross axis just like `justify-content` does along the main axis. (For the default `flex-direction: row` the cross axis corresponds to vertical and the main axis corresponds to horizontal. With `flex-direction: column` those two are interchanged respectively). But `align-content` is for multi line flexible boxes. It has no effect when items are in a single line. It aligns the whole structure according to its value.*
 > 
@@ -154,6 +151,15 @@
 > ⇒ *`align-content` 도 cross axis 에서 동작하지만 축에 item이 여러 줄(multi line)일 때 동작.*
 > 
 
+### align-self
+
+- 개별 아이템을 `cross axis` 기준으로 정렬
+- `flex-start`
+- `center`
+- `flex-end`
+
+![align-self.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8c608b77-829d-4c43-9f43-9479ba5c552f/align-self.png)
+
 ### 기타 속성
 
 - `flex-grow` : 남은 영역(남아 있는 영역이 가로일수도 있고 세로일수도 있음)을 아이템에 분배
@@ -161,6 +167,7 @@
     - *여백을 몰아주고 싶을 때 사용*
 - `order` : 배치순서변경
 
+![order-.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f54e085a-ae53-44f4-ae39-73f787ab080f/order-.png)
 > `block` : 위에서 아래로 쌓이고 페이지 너비를 전부 차지하게 됨
 > 
 > 
