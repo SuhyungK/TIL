@@ -167,7 +167,7 @@
     - *여백을 몰아주고 싶을 때 사용*
 - `order` : 배치순서변경
 
-![order-.PNG](images/order-.png)
+![order-.PNG](images/order-.PNG)
 > `block` : 위에서 아래로 쌓이고 페이지 너비를 전부 차지하게 됨
 > 
 > 
