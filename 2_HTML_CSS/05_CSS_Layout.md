@@ -125,7 +125,7 @@
 - `cross-axis` 기준
 - 컨텐츠가 여러 줄일때만 적용됨
 
-![align-content.png](images/align-content.png)
+![align-content.png](images/align-content.PNG)
 
 ## 정렬
 
@@ -141,7 +141,7 @@
 - `center` **: 가운데 줄로 정렬**
 - `baseline` : 글자 선을 기준으로 맞추기
 
-![align-items.PNG](images/align-items.png)
+![align-items.PNG](images/align-items.PNG)
 
 > *The `align-items` property of flex-box aligns the items inside a flex container along the cross axis just like `justify-content` does along the main axis. (For the default `flex-direction: row` the cross axis corresponds to vertical and the main axis corresponds to horizontal. With `flex-direction: column` those two are interchanged respectively). But `align-content` is for multi line flexible boxes. It has no effect when items are in a single line. It aligns the whole structure according to its value.*
 > 
