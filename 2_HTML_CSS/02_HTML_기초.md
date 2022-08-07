@@ -105,12 +105,14 @@
 
 - 검색엔진에서 정보의 그룹을 태그로 표현
 - 검색엔진 최적화를 위해서 메타태그, 시맨틱 태그를 통한 마크업을 효과적으로 활용 해야
+[https://t1.daumcdn.net/cfile/tistory/2545B83B594764122F](https://t1.daumcdn.net/cfile/tistory/2545B83B594764122F)
+
 
 ## 렌더링
 
 - 웹 사이트 코드를 사용자가 보게 되는 웹 사이트로 바꾸는 과정
 
-## DOM(Document Object Medel) 트리
+## DOM(Document Object Model) 트리
 
 - 텍스트 파일인 HTML 문서를 브라우저에서 렌더링하기 위한 구조
 - HTML 문서에 대한 모델 구성
