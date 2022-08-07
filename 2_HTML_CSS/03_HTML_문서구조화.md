@@ -58,8 +58,6 @@
 <input type="checkbox" name="agreement" id="agreement"> 
 ```
 
-## VSCODE 실습코드
-
 ### 일반
 
 - `text` 텍스트 입력
