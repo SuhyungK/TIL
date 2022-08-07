@@ -1,6 +1,6 @@
 # CSS
 
-## Cascading Styel Sheets
+## Cascading Style Sheets
 
 - OOP 에서 태그가 중첩될 수 있는 것처럼
 - 우리가 작성한 코드의 태그끼리도 상속되고 중첩되고 계단형식
@@ -337,71 +337,71 @@ p { color : #000000; }
     - selector A 하위의 **모든** 요소 selector B 요소
     - `div span` : div 태그 안에 있는 모든 span 태그
     
-    ```css
-    div span {
-    	color : red;
-    }
-    ```
-    
-    ```html
-    <div>
-    	<span>이건 빨강입니다.</span>
-    	<p>이건 빨강이 아닙니다.</p>
-    	<p>
-    		<span>이건 빨강입니다.</span>
-    	</p>
-    </div>
-    ```
-    
+```css
+div span {
+    color : red;
+}
+```
+
+```html
+<div>
+    <span>이건 빨강입니다.</span>
+    <p>이건 빨강이 아닙니다.</p>
+    <p>
+        <span>이건 빨강입니다.</span>
+    </p>
+</div>
+```
+
 - **자식 결합자(`>`)**
     - selector A 바로 아래의 selector B 요소
     - `div > span` : div **바로 밑**의 span 요소(내부에 <p>태그 안의 span 요소는 X)
     
-    ```css
-    div > span {
-    	color : red;
-    }
-    ```
-    
-    ```html
-    <div>
-    	<span>이건 빨강입니다.</span>
-    	<p>이건 빨강이 아닙니다.</p>
-    	<p>
-    		<span>이건 빨강이 아닙니다.</span>
-    	</p>
-    </div>
-    ```
+```css
+div > span {
+    color : red;
+}
+```
+
+```html
+<div>
+    <span>이건 빨강입니다.</span>
+    <p>이건 빨강이 아닙니다.</p>
+    <p>
+        <span>이건 빨강이 아닙니다.</span>
+    </p>
+</div>
+```
     
 - 일반 형제 결합자(`~`)
     - selector A의 형제 요소 중 뒤에 위치하는 selector B 요소를 모두 선택
     - `p ~ span` 같은 레벨에 있는 것 중에 p 뒤에 있는 span 태그
     
-    ```html
-    <body>
-        <span>p태그 앞에 있기 때문에 이건 빨강이 아닙니다.</span>
-        <p>여기 문단이 있습니다.</p>
-        <b>그리고 코드도 있습니다.</b>
-        <span>p태그와 형제이기 때문에 이건 빨강입니다!</span>
-        <b>더 많은 코드가 있습니다.</b>
-        <span>이것도 p태그와 형제이기 때문에 빨강입니다!</span>
-    </body>
-    ```
-    
+```html
+<body>
+    <span>p태그 앞에 있기 때문에 이건 빨강이 아닙니다.</span>
+    <p>여기 문단이 있습니다.</p>
+    <b>그리고 코드도 있습니다.</b>
+    <span>p태그와 형제이기 때문에 이건 빨강입니다!</span>
+    <b>더 많은 코드가 있습니다.</b>
+    <span>이것도 p태그와 형제이기 때문에 빨강입니다!</span>
+</body>
+```
+
 - 인접 형제 결합자(`+`)
     - selector A의 형제 요소 중 바로 뒤에 위치하는 selector B 요소만 선택
     - `p + span` 같은 레벨에 있는 것 중 p **바로 뒤**에 있는 span 태그
     
-    ```html
-    <body>
-        <span>p태그 앞에 있기 때문에 이건 빨강이 아닙니다.</span>
-        <p>여기 문단이 있습니다.</p>
-        <span>p태그와 인접한 형제이기 때문에 이건 빨강입니다!</span>
-        <b>더 많은 코드가 있습니다.</b>
-        <span>p태그와 인접한 형제가 아니기 때문에 이건 빨강이 아닙니다.</span>
-    </body>
-    ```
-    
+```html
+<body>
+    <span>p태그 앞에 있기 때문에 이건 빨강이 아닙니다.</span>
+    <p>여기 문단이 있습니다.</p>
+    <span>p태그와 인접한 형제이기 때문에 이건 빨강입니다!</span>
+    <b>더 많은 코드가 있습니다.</b>
+    <span>p태그와 인접한 형제가 아니기 때문에 이건 빨강이 아닙니다.</span>
+</body>
+```
+
 
 # CSS Box Model
 
