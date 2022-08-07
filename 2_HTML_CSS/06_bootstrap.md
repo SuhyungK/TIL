@@ -211,6 +211,29 @@
 </div>
 ```
 
+
+## Pagination
+- 화면 페이지 넘기는 기능 생성
+- `disabled` : 비활성화
+- `active` : 활성화
+```html
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+```
+
 ## Responsive Web
 
 - 화면의 크기에 따라 사용자에게 보이는 페이지의 레이아웃이 달라지는 것
