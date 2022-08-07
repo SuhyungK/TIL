@@ -55,8 +55,8 @@
 - `main-axis` : 막대기의 방향
 - `cross-axis` : main의 수직 방향 교차 축
 - 구성 요소
-    - `Flex Container`(**flex는 부모요소에 적용시켜야 함**)
-    - `Flex item`
+    - `Flex Container` : 부모 요소(**flex는 부모요소에 적용시켜야 함**)
+    - `Flex item` : 자식 요
 - `inline-flex` → 부모 요소에 적용됨
     - 자식요소가 inline이 되는게 아니라 부모 요소가 inline이 되는 것
 
