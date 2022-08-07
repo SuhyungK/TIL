@@ -46,7 +46,7 @@
 ## Flexbox
 
 - 행과 열(가로세로) 형태로 아이템을 배치하는 1차원 레이아웃 모델
-- 꼬치의 방향부분이 유일하게 들어가는 입구라고 생각, FILO(First In Last Out)
+- FILO(First In Last Out) : 막대기의 화살표 방향이 유일하게 들어갈 수 있는 입구라고 생각하고 배치, (row : ->,  row-reverse : <-)
 - `flex-direction`
     - `row`(기본값),
     - `column`(세로 배열)
@@ -55,8 +55,8 @@
 - `main-axis` : 막대기의 방향
 - `cross-axis` : main의 수직 방향 교차 축
 - 구성 요소
-    - `Flex Container`(**flex는 부모요소에 적용시켜야 함**)
-    - `Flex item`
+    - `Flex Container` : 부모 요소(**flex는 부모요소에 적용시켜야 함**)
+    - `Flex item` : 자식 요
 - `inline-flex` → 부모 요소에 적용됨
     - 자식요소가 inline이 되는게 아니라 부모 요소가 inline이 되는 것
 
