@@ -188,3 +188,33 @@ def fibo1(n):
 - pc : program counter
     - 어떤 줄에 접근해서 실행시킬 때 함수가 적혀 있으면 함수의 주소를 찾아가서 함수 실행 
     - 그 다음에 실행됐어야 할 걸 스택에 저장하고 함수 실행 종료 후 그 다음 번 실행 위치 찾아가서 실행
+
+### 팩토리얼 재귀 구현
+```python
+def f(n): # 팩토리얼 n! 1! = 1
+    if n <= 1:
+        return 1
+    else:
+        return n * f(n-1)
+
+for i in range(21):
+    print(f(i))
+```
+
+### 피보나치 구현
+```python
+def fibo(n):
+    if n < 2:
+        return n
+    else:
+        return fibo(n-1) + fibo(n-2)
+```
+
+### 메모이제이션 추가 구현
+```python
+memo = [-1] * 101
+memo[0] = 0
+memo[1] = 1
+for i in range(101):
+    print(i, fibo(i))
+```
