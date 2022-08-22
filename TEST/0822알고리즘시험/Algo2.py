@@ -20,4 +20,15 @@ for tc in range(1, T+1):
                 temp.append(row[j:j+3])
             result += checkPattern(temp, pattern) # 모든 값이 일치하면 return 1 이므로 count +1
 
+    # # 슬라이싱 사용 안 한 버전
+    # for i in range(N-2):
+    #     for j in range(N-2):
+    #         temp = []
+    #         for n in range(3):
+    #             temp_col = []
+    #             for m in range(3):
+    #                 temp_col.append(data[i+n][j+m])
+    #             temp.append(temp_col)
+    #         result += checkPattern(temp, pattern)
+
     print('#%d %d'%(tc, result))
