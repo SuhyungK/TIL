@@ -12,7 +12,6 @@ for test_case in range(1, T+1):
         cnt[card%10] += 1
         card //= 10
 
-    
     # triplet
     i = 0
     while i < 10:
