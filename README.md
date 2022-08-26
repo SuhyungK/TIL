@@ -33,5 +33,5 @@
 
 | no. | 문제 번호 | 문제 이름 |  풀이 여부  | 복습 |
 | --- | -------- | --------- | --------- | -----|
-| 00  | <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWQmA4uK8ygDFAXj">4615</a> | <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWQmA4uK8ygDFAXj">재미있는 오셀로 게임</a> | ☑️ |    |  
+|   00  |   <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWQmA4uK8ygDFAXj">4615</a>  |   <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWQmA4uK8ygDFAXj">재미있는 오셀로 게임</a>  |   ☑️    |    |  
 
