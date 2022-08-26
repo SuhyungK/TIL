@@ -5,10 +5,8 @@ T = int(input())
 for tc in range(1, T + 1):
     n, m = map(int, input().split())
     board = [[-1] * n for _ in range(n)]
-
-    mid = n // 2
-    board[mid][mid] = board[mid - 1][mid - 1] = 2
-    board[mid - 1][mid] = board[mid][mid - 1] = 1
+    board[n//2][n//2] = board[n//2 - 1][n//2 - 1] = 2
+    board[n//2 - 1][n//2] = board[n//2][n//2 - 1] = 1
 
     cnt = [2, 2]
     dxy = [[0, 1], [1, 1], [1, 0], [1, -1], [0, -1], [-1, -1], [-1, 0], [-1, 1]]
