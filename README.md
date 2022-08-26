@@ -28,3 +28,6 @@
 - [스택(Stack)1](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/04_Stack1.md)
 - [DP & DFS](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/05_DP%26DFS.md)
 - [스택(Stack)2]()
+
+## IM 대비
+|   분류   |  순 번    |    풀이 여부    
