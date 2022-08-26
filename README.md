@@ -30,4 +30,7 @@
 - [스택(Stack)2]()
 
 ## IM 대비
-|   분류   |  순 번    |    풀이 여부    
+|          순번          |        추천 문제         |        문제 번호         |        문제 이름         |         난이도          |        풀이 링크         |
+| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
+| 00 |  :heavy_check_mark:  | <a href="https://www.acmicpc.net/problem/15649" target="_blank">15649</a> | <a href="https://www.acmicpc.net/problem/15649" target="_blank">N과 M (1)</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | <a href="./../solution/backtracking/15649">바로가기</a> |
+| 01 |  :heavy_check_mark:  | <a href="https://www.acmicpc.net/problem/15650" target="_blank">15650</a> | <a href="https://www.acmicpc.net/problem/15650" target="_blank">N과 M (2)</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | <a href="./../solution/backtracking/15650">바로가기</a> |
