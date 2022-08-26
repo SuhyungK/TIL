@@ -30,7 +30,7 @@
 - [스택(Stack)2]()
 
 ## IM 대비
-|          순번          |        문제 번호         |        문제 이름         |        풀이 여부          |         복습          |
+|          순번          |        문제 번호         |        문제 이름         |        풀이 여부          |         복습          |                  
 | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | 00 |  <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWQmA4uK8ygDFAXj">4615</a>  | 재밌는 오셀로 게임 | <a href="https://www.acmicpc.net/problem/15649" target="_blank">N과 M (1)</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> |
 | 01 |    | <a href="https://www.acmicpc.net/problem/15650" target="_blank">15650</a> | <a href="https://www.acmicpc.net/problem/15650" target="_blank">N과 M (2)</a> | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | <a href="./../solution/backtracking/15650">바로가기</a> |
