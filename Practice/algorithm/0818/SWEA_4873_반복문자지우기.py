@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt')
+sys.stdin = open('4615.txt')
 
 def length(arr):          # 0 제외한 길이 구하기
     cnt = 0

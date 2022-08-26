@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt')
+sys.stdin = open('4615.txt')
 
 def length(arr):
     cnt = 1

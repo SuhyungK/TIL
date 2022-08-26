@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt')
+sys.stdin = open('4615.txt')
 
 for test_case in range(10):
     dump = int(input())

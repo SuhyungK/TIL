@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt')
+sys.stdin = open('4615.txt')
 
 # (랑 {가 들어오면 push
 # )랑 }가 들어오면 stack에서의 값과 비교해서 짝이면 pop 아니면 return 0

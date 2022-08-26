@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt')
+sys.stdin = open('4615.txt')
 
 def dp(n):
     if n == 2 : return 3
