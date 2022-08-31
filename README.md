@@ -29,3 +29,12 @@
 - [DP & DFS](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/05_DP%26DFS.md)
 - [스택(Stack)2]()
 
+
+## Django
+
+- [View&Template]
+- [Model]
+
+### Project
+- [First Project]
+
