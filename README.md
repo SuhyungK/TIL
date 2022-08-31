@@ -36,5 +36,5 @@
 - [Model]
 
 ### First Project
-- [~articles](https://github.com/SuhyungK/TIL/tree/master/4_Django/0831_01_django)
+- [~articles](https://github.com/SuhyungK/TIL/tree/master/4_Django/0830_01_django)
 - [pages~](https://github.com/SuhyungK/TIL/tree/master/4_Django/0831_01_django_1)
