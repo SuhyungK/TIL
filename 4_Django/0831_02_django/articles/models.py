@@ -13,4 +13,8 @@ class Article(models.Model):
     # 테이블을 만들기 위한 뼈대 설계
     title = models.CharField(max_length=10)
     content = models.TextField()
-    pass
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
