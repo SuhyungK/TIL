@@ -4,10 +4,28 @@
   <h1>Articles</h1>
   <a href="{% url 'articles:new' %}">NEW</a>
   <hr>
-  {% for article in articles %}
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+      </tr>
+    </thead>
+    {% for article in articles %}
+    <tbody>
+      <tr>
+        <th scope='row'>{{ article.pk }}</th>
+        <td><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></td>
+        <td><a href="{% url 'articles:detail' article.pk %}">{{ article.content }}</a></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+  {% comment %} {% for article in articles %}
     <p>글 번호 : {{ article.pk }}</p>
     <p>제목 : {{ article.title }}</p>
     <p>내용 : {{ article.content }}</p>
     <hr>
-  {% endfor %}
+  {% endfor %} {% endcomment %}
 {% endblock content %}

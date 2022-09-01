@@ -8,9 +8,10 @@ class Article(models.Model):
     
     # 클래스 변수 = 하나의 필드
     # 모델 클래스 == 테이블 스키마
-    # 컬럼 - datatype
+    # 컬럼 - datatype 하나의 쌍
     # CharField = models안에 있는 타입을 결정하는 무언가...
     # 테이블을 만들기 위한 뼈대 설계
+    # https://noah2021.gitbooks.io/django/content/about_models.html
     title = models.CharField(max_length=10)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
