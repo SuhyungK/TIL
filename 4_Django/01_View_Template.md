@@ -7,7 +7,6 @@
 - Sending and Retrieving from data
 - Django URLs
 
----
 
 ## Framework
 
@@ -30,7 +29,7 @@
     - 단점 ⇒ 위성으로 의해 가려져 우주 쓰레기 어쩌고…
 - 인터넷을 사용한다 = 전세계의 컴퓨터가 연결되어 있는 하나의 인프라를 이용함
 
----
+
 
 ## 클라이언트와 서버
 
@@ -85,7 +84,7 @@
 
 ### [참조] MSA
 
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcTAT6G%2FbtqD2bvNaYo%2F42aEDP4R01hfklHBQBZefk%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcTAT6G%2FbtqD2bvNaYo%2F42aEDP4R01hfklHBQBZefk%2Fimg.png)
+![https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcTAT6G%2FbtqD2bvNaYo%2F42aEDP4R01hfklHBQBZefk%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcTAT6G%2FbtqD2bvNaYo%2F42aEDP4R01hfklHBQBZefk%2Fimg.png)
 
 - 기존의 *Monolithic Architecture* (모노리틱 구조)
     - 하나의 구조에 모든 기능이 담긴 서버를 한 번에 담아둘 수 있음
@@ -99,7 +98,6 @@
     - [넷플릭스로 알아보는 MSA (samsungsds.com)](https://www.samsungsds.com/kr/insights/msa_and_netflix.html)
     
 
----
 
 ## Django 구조 이해하기
 
@@ -251,7 +249,7 @@ INSTALLED_APPS = [
     - *view* 함수들이 정의 되는 곳
     - *MTV* 패턴의 *V*에 해당
 
----
+
 
 ## 요청과 응답
 
@@ -314,7 +312,7 @@ render(request, template_name, context)
 
 [[Django] render 와 redirect 의 차이](https://ssungkang.tistory.com/entry/Django-render-%EC%99%80-redirect-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
 
----
+
 
 ## [참고] 추가 설정
 
@@ -327,7 +325,6 @@ render(request, template_name, context)
     - *USE_TZ = ‘True’*  여야 함
     
 
----
 
 ## Django Template
 
