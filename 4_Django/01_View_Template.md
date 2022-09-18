@@ -576,3 +576,168 @@ TEMPLATES = [
 </form>
 {% endblock content %}
 ```
+
+## HTTP request methods
+
+### HTTP
+
+- HTML 문서와 같은 리소스(데이터, 자원)를 가져올 수 있도록 해주는 프로토콜
+    - `http` vs `https`
+
+### HTTP request methods
+
+- 웹에서 이루어지는 모든 데이터 교환의 기초
+- HTTP는 주어진 리소스가 수행 할 원하는 작업을 나타내는 *request methods*를 정의
+- 자원에 대한 행위를 정의
+
+## GET
+
+- 서버로부터 정보를 요청할 때만 사용
+- 데이터 가져올 때만 사용해야 함
+- 서버로 전송할 때 *Query String Parameters*를 통해 전송
+    - 데이터는 URL에 포함되어 서버로 보내짐
+- GET 방식이 디폴트로 설정되어 있어도 항상 `method="GET”` 설정
+
+### Query String parameters
+
+- 사용자가 입력 데이터를 전달하는 방법 중 하나
+- URL 주소에 데이터를 파라미터를 통해 넘기는 것
+- 정해진 주소 이후에 물음표를 쓰는 것으로 *Query String* 시작함을 알림
+- 파라미터가 여러 개일 경우 *“&”*을 붙여 여러 개의 파라미터를 넘길 수 있음
+    - `http://host.port/path?key=value&key=value`
+
+## Retrieving the data - Server
+
+- 데이터 가져오기
+- 서버는 클라이언트로 받은 *key-value* 쌍의 데이터를 받게 됨
+
+```html
+<!--throw.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Throw</h1>
+<form action="/catch/" method="GET">
+    <label for="messeage">Throw</label>
+    <input type="text" id="messeage" name="messeage">
+    <input type="submit">
+
+    <a href="/index/">뒤로</a>
+</form>
+{% endblock content %}
+```
+
+- *throw*페이지에서 보낸 데이터는 *catch*페이지의 URL
+- GET 방식을 사용하기 때문에 데이터를 서버에 전송할 때 *Query String Parameters*를 통해 전송
+
+```html
+<!-- catch.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Catch</h1>
+    <h2>여기서 데이터를 받았어요!</h2>
+    <a href="/throw/">throw</a>
+
+    <a href="/">뒤로</a>
+{% endblock content %}
+```
+
+## 데이터 가져오기
+
+- 모든 요청 데이터는 *view* 함수의 첫번째 인자 `request`에 들어 있음
+
+![01_catch.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/41b3d5ad-c096-40f2-b7c7-c7917732b6ff/01_catch.png)
+
+## Request and Response
+
+1. 페이지가 요청되면 Django는 요청에 대한 메타데이터를 포함하는 *HttpRequest object* 생성
+2. 해당하는 적절한 *view* 함수를 로드하고 *HttpRequest*를 첫 번째 인자로 전달
+3. 마지막으로 *view* 함수는 *HttpResponse object*를 반환
+
+## Trailing Slashes
+
+- Django는 URL 끝에 /가 없다면 자동으로 붙여주는 것이 기본
+    - 그래서 모든 주소가 ‘/’ 로 끝나도록 구성 되어 있음
+    - 모든 프레임워크가 이런 것은 아님
+- Django의 url 설계 철학
+    - 기술적인 측면에서 **[foo.com/bar](http://foo.com/bar)** 와 **[foo.com/bar/**는](http://foo.com/bar/는) 서로 다른 URL이다
+    - 검색 엔진 로봇이나 웹 트래픽 분석 도구에서는 그 둘을 서로 다른 페이지로 봄
+    - 그래서 Django는 URL을 정규화하여 검색 엔진 로봇이 혼동하지 않게 해야 함
+
+### URL 정규화
+
+- 정규 URL을 명시하는 것
+- 복수의 페이지에서 같은 콘텐츠가 존재하는 것 방지
+- `[http://www.naver.com](http://www.naver.com)` 과 `[http://naver.com](http://naver.com)` 로 방문한 경우 불필요한 측면의 URL로 방문한 사용자를 원래의 URL로 변경시켜 이동
+- “Django 에서는 *trailing slash*가 없는 요청에 대해 자동으로 */(slash)*를 추가하여 통합된 하나의 콘텐츠로 볼 수 있도록 함
+
+## Variable routing의 필요성
+
+- `url` → `App>url` → `App>view` → …
+- 템플릿의 많은 부분이 중복되고, 일부분만 변경되는 상황에서 비슷한 URL과 템플릿을 계속해서 만들기에는 낭비가 심해서
+- 하나의 페이지를 가지고 데이터만 불러와서 보여지는 화면만 변경시키는 것
+- URL 주소를 변수로 사용하는 것
+- URL 일부를 변수로 지정하여 *view* 함수의 인자로 넘길 수 있음
+- 즉, 변수 값에 따라 하나의 path()에 여러 페이지 연결 가능
+- [참조] Routing(라우팅) : 어떤 네트워크 안에서 통신 데이터를 보낼 때 최적의 경로를 선택하는 과정
+
+### Variable routing 작성
+
+- 변수는 **<>**에 정의하고 *view* 함수의 인자로 할당됨
+- 기본 타입은 *string*이며 5가지 타입으로 명시할 수 있음
+1. str
+    - ‘/’을 제외하고 비어 있지 않은 모든 문자열
+    - 디폴트 값
+2. int
+    - 0 또는 양의 정수와 매치
+
+```python
+urlpatterns = [
+	path('hello/<name>/', views.hello),
+]
+```
+
+### View 함수 작성
+
+- *variable routing*으로 할당된 변수를 인자로 받고 템플릿 변수로 사용 가능
+
+```python
+def hello(request, name):
+    context = {
+        'name' : name,
+    }
+    return render(request, 'hello.html', context)
+```
+
+## App URL 매핑
+
+- 앱이 많아졌을 때 *urls.py*를 각 app에 매핑하는 방법
+- 하나의 프로젝트의 여러 앱이 존재한다면, 각각의 앱 안에 *urls.py*를 만들고 프로젝트 *urls.py*에서 각 앱의 URL 매핑을 위탁할 수 있음
+
+### include()
+
+- 다른 URL들을 참조할 수 있도록 돕는 함수
+- 함수 *include()*를 만나게 되면 URL의 그 시점까지 일치하는 부분을 잘라내고, 남은 문자열 부분을 후속 처리를 위해 include 된 URL로 전달
+
+## Naming URL patterns
+
+- 이제 URL을 직접 작성하는 것이 아니라 *path()*함수의 *name* 인자를 정의해서 사용
+- 이를 통해 URL 설정에 정의된 특정한 경로들의 의존성 제거할 수 있음
+- DTL의 Tag 중 하나인 URL 태그를 사용해서 *path()*함수의 *name* 사용 가능
+
+```python
+from django.contrib import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('hello/', views.hello, name='hello'),
+    path('throw/', views.throw, name='throw'),
+    path('catch/', views.catch, name='catch'),
+    path('hello/<str:name>/', views.hello, name='hello'),
+]
+```
+
+- *url* 태그 사용
+    - 주어진 URL 패턴 이름 및 선택적 매개 변수와 일치하는 절대 경로 주소 반환
