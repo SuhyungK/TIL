@@ -576,7 +576,6 @@ TEMPLATES = [
 </form>
 {% endblock content %}
 ```
-<<<<<<< HEAD
 
 ## HTTP request methods
 
