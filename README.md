@@ -32,7 +32,7 @@
 
 ## Django
 
-- [View&Template]
+- [View&Template](https://github.com/SuhyungK/TIL/blob/master/4_Django/01_View_Template.md#framework)
 - [Model]
 
 ### First Project
