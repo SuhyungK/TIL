@@ -36,4 +36,4 @@
 - Django templates 기본 경로에 앱과 같은 이름의 폴더를 생성 **app_name/templates/app_name** 형태로 변경
 - Django templates의 기본 경로(app_name/templates/) 자체를 변경할 수는 없기 때문에 물리적인 이름 공간으로 분리하는 것
 
-![02_templaespace.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c919bfc5-d392-4fe5-8d5e-ac7ad4be67e4/02_templaespace.png)
+![02_templaespace.PNG](images/02_templaespace.PNG)
