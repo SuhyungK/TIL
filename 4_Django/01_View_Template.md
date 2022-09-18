@@ -310,7 +310,7 @@ render(request, template_name, context)
 </html>
 ```
 
-[[Django] render 와 redirect 의 차이](https://ssungkang.tistory.com/entry/Django-render-%EC%99%80-redirect-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
+- 참고 : [[Django] render 와 redirect 의 차이](https://ssungkang.tistory.com/entry/Django-render-%EC%99%80-redirect-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
 
 
 
@@ -349,4 +349,230 @@ render(request, template_name, context)
     - 일부 태그는 시작/종료 태그 필요
     - `{% if %} {% endif %}`
     
-    [Built-in template tags and filters | Django documentation | Django](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/)
+    - 참고 : [Built-in template tags and filters | Django documentation | Django](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/)
+
+    ## DTL 실습
+
+```python
+# urls.py
+from django.contrib import admin
+from django.urls import path
+from articles import views
+
+urlpatterns = [
+	path('admin/', admin.site.urls),
+	path('index/', views.index),
+	path('greeting/', views.greeting),
+]
+```
+
+```python
+# articles/views.py
+
+def greeting(request):
+	return render(request, 'greeting.html', {'name' : 'Alice'})
+```
+
+```html
+<!-- <project>/templates/greeting.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<p>안녕하세요 저는 {{ name }} 입니다. </p>
+</body>
+</html>
+```
+
+- *context* 데이터가 많아질 경우 다음과 같이 작성하는 것이 바람직
+- *context* 는 다른 이름으로 사용 가능하지만 관행적으로 *context* 사용
+
+```python
+# views.py
+
+def greeting(request):
+	foods = ['apple', 'banana', 'coconut',]
+	info = {
+		'name' : 'Alice',	
+	}
+	context = {
+		'foods' : foods,
+		'info' : info,
+	}
+	return render(request, 'greeting.html', context)
+```
+
+```html
+<p> 저는 {{ foods.0 }}을(를) 가장 좋아합니다.</p>
+<p> 안녕하세요 저는 {{ info.name }} 입니다.</p>
+```
+
+- *Filters*
+
+```python
+# urls.py
+
+urlpatterns = [
+	path('dinner/', views.dinner),
+]
+```
+
+```python
+# views.py
+import random
+from django.shortcuts import render
+
+def dinner(request):
+	foods = ['족발', '햄버거', '치킨', '초밥',]
+	pick = random.choice(foods)
+	context = {
+		'pick' : pick,
+		'foods' : foods,
+	}
+	return render(request, 'dinner.html', context)
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<p>{{ pick }}은 {{ pick|length }}글자</p>
+	<p>{{ foods|join:", "}}</p>
+	
+	<p>메뉴판</p>
+	<ul>
+		{% for food in foods%}
+			<li>{{ food }}</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>
+```
+
+## 템플릿 상속
+
+- 템플릿 재사용 ↑
+- 모든 사이트의 공통 요소를 포함하고, 하위 템플릿이 재정의(*override)*할 수 있는 블록을 정의하는 기본 스켈레톤 템플릿을 만들 수 있음
+- 모든 템플릿에 부트스트랩 적용하려면 하나의 고정된 파일을 가져와서 상속
+- `{% extends '' %}`
+    - 자식(하위)템플릿이 부모 템플릿을 확장(상속받음)한다는 것 알림
+    - **반드시 템플릿 최상단에 작성(2개 이상 사용할 수 없음)**
+- `{% block content%} {% endblock content%}`
+    - 하위 템플릿에서 재지정(overriden)할 수 있는 블록 정의
+    - 하위 템플릿이 채울 수 있는 공간
+    - `body`태그 안에 작성
+
+```html
+<!-- articles/templates/base.html-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<!-- bootstrap CDN 작성 -->
+	<title>Document</title>
+</head>
+<body>
+	{% block content %}
+	{% endblock content %}
+	<!-- bootstrap CDN 작성 -->
+</body>
+</html>
+```
+
+### 템플릿 경로 추가하기
+
+- 기본 *template* 경로가 아닌 다른 경로를 추가하기 위한 코드
+
+```python
+# settings.py
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR, 'templates',],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
+
+## Sending and Retrieving form data
+
+- *“데이터를 보내고 가져오기”*
+- *HTML form element* 통해 사용자-애플리케이션 간 상호작용 이해하기
+- 클라이언트 측에서 *HTML form*은 HTTP 요청을 서버에 보내는 가장 편한 방법
+- 이를 통해 사용자는 HTTP 요청에서 어떤 정보를 보낼 지 선택할 수 있음
+
+## Sending form data - Client
+
+### HTML <form> element
+
+- 데이터가 전송되는 방법 정의
+- **데이터를 어디(`action`)에 어떤 방식(`method`)으로 보낼지**
+- 웹에서 사용자 정보를 입력하는 여러가지 방식(*text, button, submit*)을 제공하고, **사용자로부터 할당된 데이터를 서버로 전송**하는 역할
+- *Method : **GET, POST**, DELETE, PATCH, PUT*
+
+### action
+
+- 입력 데이터가 전송될 URL을 지정 → **어디로** 보낼 것인가
+- 데이터를 어디에 보낼 것인지 지정하는 것이며 반드시 유효한 URL 이어야 함
+- 이 속성을 지정하지 않으면 현재 *form*이 있는 페이지의 URL로 보내짐
+
+### method
+
+- 데이터를 **어떻게** 보낼 것인지
+- 입력 데이터의 HTTP *request methods*를 지정
+- HTML *form* 데이터는 오직 2가지 방식으로만 전송
+- `GET`은 서버에서 정보를 조회할 때 사용
+    - `url` 뒤에 `id=`  & `pwd=`
+- `POST`는 서버에 전송할 때
+    - 보안적으로 뛰어남
+    
+
+## HTML input’s 속성
+
+- 사용자로부터 데이터를 입력 받기 위해 사용
+- *type* 속성에 따라 동작 방식이 달라짐
+- *type* 지정하지 않은 경우 기본 값은 *“text”*
+
+### name
+
+- form을 통해 데이터 제출할 때 *name* 속성에 설정된 값을 서버로 전송,
+- 서버는 *name* 속성에 설정된 값을 통해 사용자가 입력한 데이터에 접근할 수 있음
+- 주요 용도는 GET/POST 방식으로 서버에 전달하는 파라미터로 매핑하는 것
+    - `name` = `key` / `value` = `value`
+
+```html
+<!-- articles/temlpates/throw.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Throw</h1>
+<form action="#" method="#">
+    <label for="messeage">Throw</label>
+    <input type="text" id="messeage" name="messeage">
+    <input type="submit">
+</form>
+{% endblock content %}
+```
