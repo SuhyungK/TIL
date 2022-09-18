@@ -1,7 +1,7 @@
 ## Django
 
-- [Django Intro](https://www.notion.so/18_View-Template-bbb4aa20e5eb422f9f55e7ae7adbbbe8)
-- [Django 구조 이해하기 (MTV Design Pattern)](https://www.notion.so/18_View-Template-bbb4aa20e5eb422f9f55e7ae7adbbbe8)
+- [Django Intro](https://github.com/SuhyungK/TIL/blob/master/4_Django/01_View_Template.md#framework)
+- [Django 구조 이해하기 (MTV Design Pattern)](https://github.com/SuhyungK/TIL/blob/master/4_Django/01_View_Template.md#django-%EA%B5%AC%EC%A1%B0-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0)
 - [Django Quick Start](https://www.notion.so/18_View-Template-bbb4aa20e5eb422f9f55e7ae7adbbbe8)
 - Django Template
 - Sending and Retrieving from data
@@ -576,6 +576,7 @@ TEMPLATES = [
 </form>
 {% endblock content %}
 ```
+<<<<<<< HEAD
 
 ## HTTP request methods
 
@@ -741,3 +742,5 @@ urlpatterns = [
 
 - *url* 태그 사용
     - 주어진 URL 패턴 이름 및 선택적 매개 변수와 일치하는 절대 경로 주소 반환
+=======
+>>>>>>> f115e08c2568a58b079ff533d5bb29d55689cbe7
