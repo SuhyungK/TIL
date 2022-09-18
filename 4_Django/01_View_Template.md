@@ -741,5 +741,15 @@ urlpatterns = [
 
 - *url* 태그 사용
     - 주어진 URL 패턴 이름 및 선택적 매개 변수와 일치하는 절대 경로 주소 반환
-=======
->>>>>>> f115e08c2568a58b079ff533d5bb29d55689cbe7
+
+```html
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Catch</h1>
+    <h2>여기서 {{ message }}를 받았어요!</h2>
+    <a href="{% url 'throw' %}">다시 던지러</a>
+
+    <a href="{% url 'index' %}">뒤로</a>
+{% endblock content %}
+```
