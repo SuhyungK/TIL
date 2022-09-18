@@ -647,7 +647,7 @@ TEMPLATES = [
 
 - 모든 요청 데이터는 *view* 함수의 첫번째 인자 `request`에 들어 있음
 
-![01_catch.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/41b3d5ad-c096-40f2-b7c7-c7917732b6ff/01_catch.png)
+![01_catch.PNG](images/01_catch.PNG)
 
 ## Request and Response
 
