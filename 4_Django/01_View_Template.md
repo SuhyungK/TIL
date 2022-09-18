@@ -1,6 +1,6 @@
 ## Django
 
-- [Django Intro](https://www.notion.so/18_View-Template-bbb4aa20e5eb422f9f55e7ae7adbbbe8)
+- [Django Intro](https://github.com/SuhyungK/TIL/blob/master/4_Django/01_View_Template.md#framework)
 - [Django 구조 이해하기 (MTV Design Pattern)](https://www.notion.so/18_View-Template-bbb4aa20e5eb422f9f55e7ae7adbbbe8)
 - [Django Quick Start](https://www.notion.so/18_View-Template-bbb4aa20e5eb422f9f55e7ae7adbbbe8)
 - Django Template
