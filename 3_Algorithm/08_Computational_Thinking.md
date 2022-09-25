@@ -2,15 +2,14 @@
 
 ## 목차
 
-1. 서론 - 프로그래밍 논리
-2. 논리와 증명
-3. 수와 표현
+1. [서론 - 프로그래밍 논리](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/08_Computational_Thinking.md#%EC%84%9C%EB%AC%B8)
+2. [논리와 증명](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/08_Computational_Thinking.md#%EB%85%BC%EB%A6%AC%EC%99%80-%EC%A6%9D%EB%AA%85)
+3. [수와 표현](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/08_Computational_Thinking.md#%EC%88%98%EC%99%80-%ED%91%9C%ED%98%84)
 4. 집합과 조합론
 5. 기초 수식
 6. 재귀
 7. 동적 프로그래밍
 
----
 
 ## 서문
 
