@@ -1,14 +1,13 @@
 # Tree
 
-- [트리](https://www.notion.so/22_Tree-d526b18052d6451aaac970f53f830a07)
-- [이진 트리](https://www.notion.so/22_Tree-d526b18052d6451aaac970f53f830a07)
-- 이진 트리의 표현
-- [참조] 이진 트리의 저장
-- 연습 문제
-- 이진탐색 트리
-- 힙
+- [트리](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/07_Tree.md#%ED%8A%B8%EB%A6%AC)
+- [이진 트리](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/07_Tree.md#%ED%8A%B8%EB%A6%AC)
+- [이진 트리의 표현](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/07_Tree.md#%EB%B0%B0%EC%97%B4%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9D%B4%EC%A7%84-%ED%8A%B8%EB%A6%AC%EC%9D%98-%ED%91%9C%ED%98%84)
+- [이진 트리의 저장](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/07_Tree.md#%EC%9D%B4%EC%A7%84-%ED%8A%B8%EB%A6%AC%EC%9D%98-%EC%A0%80%EC%9E%A5)
+- [연습 문제](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/07_Tree.md#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+- [이진탐색 트리](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/07_Tree.md#%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89-%ED%8A%B8%EB%A6%AC)
+- [힙](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/07_Tree.md#%ED%9E%99)
 
----
 
 ## 트리
 
@@ -467,7 +466,7 @@ def f(n):       # global cnt 없이 순회한 정점 수를 리턴하는 함수
 
 ### 중위 순회 → 오름차순
 
-![캡처.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cdedfc76-3b67-47e3-958b-89c27eaeef67/%EC%BA%A1%EC%B2%98.png)
+![캡처.PNG](images/07_%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89%ED%8A%B8%EB%A6%AC.PNG)
 
 ```python
 tree = [0, 9, 4, 12, 3, 6, 0, 15, 0, 0, 5, 0, 0, 0, 13, 17]
