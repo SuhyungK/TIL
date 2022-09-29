@@ -210,7 +210,7 @@ for tc in range(1, T+1):
     - f의 대표 원소 찾기(f → e)
     - f의 대표원소를 d의 대표원소로 교체(f → e / f → e → c)
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5d5bea15-27a3-43d4-8855-3f90f90091a8/Untitled.png)
+    ![Untitled](images/Untitled.png)
     
 - *Make-set*
 
