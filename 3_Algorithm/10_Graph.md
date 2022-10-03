@@ -96,8 +96,8 @@
 
 - 그래프 순회(탐색)
     - 비선형구조인 그래프로 표현된 모든 자료(정점)을 빠짐없이 탐색하는 것을 의미
-    - 깊이 우선 탐색(DFS)
-    - 너비 우선 탐색(BFS)
+    - 깊이 우선 탐색(*DFS, Depth First Search*)
+    - 너비 우선 탐색(*BFS, Breadth First Seach*)
 - 시작 정점의 한 방향으로 갈 수 있는 경로가 있는 곳까지 깊이 탐색해 가다가 더 이상 갈 곳이 없게 되면, 가장 마지막에 만났던 갈림길 간선이 있는 정점으로 되돌아와서 다른 방향의 정점으로 탐색을 계속 반복하여 결국 모든 정점을 방문하는 순회방법
 - 가장 마지막에 만났던 갈림길의 정점으로 되돌아가서 다시 깊이 우선 탐색을 반복해야 하므로 후입선출(LIFO) 구조의 스택 사용
 
@@ -157,9 +157,11 @@ BFS(G, v)
 			u를 큐에 넣고, 방문한 것으로 표시
 ```
 
-### [SWEA] 상원이의 생일파티(BFS)
+### [SWEA] 상원이의 생일파티
 
 ```python
+# BFS
+
 T = int(input())
 for tc in range(1, T+1):
     N, M = map(int, input().split())
@@ -183,6 +185,38 @@ for tc in range(1, T+1):
                 visit[i] = 1
                 cnt += 1
                 queue.append((i, c+1))
+ 
+    print(f'#{tc}', cnt)
+```
+
+```python
+# DFS
+
+T = int(input())
+for tc in range(1, T+1):
+    N, M = map(int, input().split())
+    arr = [[] for _ in range(N+1)]
+    visit = [0] * (N+1)
+    cnt = 0
+  
+    for _ in range(M):
+        a, b = map(int, input().split())
+        arr[a].append(b)
+        arr[b].append(a)
+ 
+    stack = [(1, 1)]
+    visit[1] = 1
+    while stack:
+        s, c = stack.pop()
+        if c >= 3:
+            continue
+        for i in arr[s]:
+            if visit[i] == 0:
+                visit[i] = c+1
+                cnt += 1
+            elif visit[i] > c+1:
+                visit[i] = c+1
+            stack.append((i, c+1))            
  
     print(f'#{tc}', cnt)
 ```
@@ -238,7 +272,7 @@ def union(x, y):
 - 연산의 효율을 높이는 방법
     - *Rank*를 이용한 *Union*
 
-## 최소 신장 트리(MST)
+## 최소 신장 트리(MST, Minimum Spanning Tree)
 
 - 신장 트리(*Spanning Tree)*
     - 그래프 내의 모든 정점을 포함하는 트리
@@ -416,7 +450,7 @@ print(total)
 - 모든 정점들에 대한 최단 경로
     - 플로이드-워샬 알고리즘
 
-## 다익스트라 알고리즘
+## 다익스트라(_Dijkstra_) 알고리즘
 
 - 시작 정점에서 거리가 최소인 정점을 선택해 나가면서 최단 경로 구하기
 - 시작 정점(s)에서 끝 정점(t) 까지의 최단 경로에 정점 x가 존재
