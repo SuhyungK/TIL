@@ -115,9 +115,9 @@
 ```python
 DFS_Recursive(G, v)
 	visitd[v] -> True
-	for each all w in adjacency(G, v)
-		if visit[w] != True
-			DFS_Recursive(G, w)
+	for each all w in adjacency(G, v) # 모든 인접한 곳에 대해
+		if visit[w] != True   # 아직 방문하지 않았다면 방문처리
+			DFS_Recursive(G, w) # w를 정점으로 재귀
 ```
 
 ### DFS - 반복
