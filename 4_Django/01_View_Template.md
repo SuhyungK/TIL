@@ -274,6 +274,7 @@ urlpatterns = [
 
 - HTTP 요청을 수신하고 HTTP 응답을 반환하는 함수 작성
 - *Template*에게 HTTP 응답 서식을 맡김(요청 보냄)
+- 장고가 자동으로 브라우저의 요청을 request로 객체화하여 뷰 함수로 전달
 
 ```python
 # <application>/views.py
