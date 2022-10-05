@@ -311,8 +311,10 @@ render(request, template_name, context)
 </html>
 ```
 
+- `render`는 템플릿을 불러오고, `redirect` 는 URL로 이동
+    
+    URL 로 이동한다는 건 그 URL 에 맞는 views 가 다시 실행될테고 여기서 `render` 를 할지 다시 `redirect` 할지 결정하는 것
 - 참고 : [[Django] render 와 redirect 의 차이](https://ssungkang.tistory.com/entry/Django-render-%EC%99%80-redirect-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
-
 
 
 ## [참고] 추가 설정
@@ -665,6 +667,11 @@ TEMPLATES = [
     - 기술적인 측면에서 **[foo.com/bar](http://foo.com/bar)** 와 **[foo.com/bar/**는](http://foo.com/bar/는) 서로 다른 URL이다
     - 검색 엔진 로봇이나 웹 트래픽 분석 도구에서는 그 둘을 서로 다른 페이지로 봄
     - 그래서 Django는 URL을 정규화하여 검색 엔진 로봇이 혼동하지 않게 해야 함
+- 트레일링 슬래시를 URL 끝에 붙이는 것은 해당 URL 리소스가 디렉토리(directory)임을 의미합니다. 이를 붙이지 않은 것은 해당 URL 리소스가 파일(file)임을 의미하죠.
+```python
+https://www.google.com/example/ -> 디렉토리입니다.
+https://www.google.com/example -> 파일입니다.
+```
 
 ### URL 정규화
 
