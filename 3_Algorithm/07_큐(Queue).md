@@ -226,7 +226,7 @@ def Qpeek():
 
 - 1차원 배열을 사용하되, 논리적으로는 배열의 처음과 끝이 연결되어 원형 형태의 큐를 이룬다고 가정하고 사용
 
-![Untitled](.img/17_queue1.png)
+![Untitled](images/17_queue1.png)
 
 - 실제로는 인덱스를 처음으로 이동 시키는 것이지만 논리적으로는 원형으로 이루어져 있다고 가정
 
@@ -252,13 +252,13 @@ def Qpeek():
 
 ## 원형 큐의 연산 과정
 
-![Untitled](.img/17_queue2.png)
+![Untitled](images/17_queue2.png)
 
 - `enQueue` : `rear` 1 증가
 
-![Untitled](.img/17_queue3.png)
+![Untitled](images/17_queue3.png)
 
-![Untitled](.img/17_queue4.png)
+![Untitled](images/17_queue4.png)
 
 - `rear` 다음에 `front` 인 경우가 큐가 가득 찬 상태
 - `rear` == `front` : 큐가 비어 있는 상태

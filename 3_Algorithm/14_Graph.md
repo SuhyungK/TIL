@@ -86,7 +86,7 @@
         
     - 실생활 문제에서는 방향성 잘 따져야 → 친구 관계 : 방향성 X
 
-![https://blog.kakaocdn.net/dn/XS2B3/btqYAsxHioP/JLJEm42x2WwK3O5mFc7SLK/img.png](https://blog.kakaocdn.net/dn/XS2B3/btqYAsxHioP/JLJEm42x2WwK3O5mFc7SLK/img.png)
+![https://blog.kakaocdn.net/dn/XS2B3/btqYAsxHioP/JLJEm42x2WwK3O5mFc7SLK/img.png](images/28_graph.png)
 
 - 인접 행렬의 단점?
     - 2차원 배열은 *1,000 X  1,000*까지만 만들자고 하면 빈 칸의 개수가 너무 많음
@@ -244,7 +244,7 @@ for tc in range(1, T+1):
     - f의 대표 원소 찾기(f → e)
     - f의 대표원소를 d의 대표원소로 교체(f → e / f → e → c)
     
-    ![Untitled](images/Untitled.png)
+    ![Untitled](images/28_graph2.png)
     
 - *Make-set*
 
