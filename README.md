@@ -27,7 +27,7 @@
 - [문자열](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/03_%EB%AC%B8%EC%9E%90%EC%97%B4.md)
 - [스택(Stack)1](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/04_Stack1.md)
 - [DP & DFS](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/05_DP%26DFS.md)
-- [스택(Stack)2]()
+- [스택(Stack)2](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/06_%EC%8A%A4%ED%83%9D(Stack)2.md)
 
 
 ## Django
