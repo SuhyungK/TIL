@@ -1,4 +1,4 @@
-# 23_Computational Thinking
+# 10_Computational Thinking
 
 ## 목차
 
