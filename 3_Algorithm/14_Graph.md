@@ -1,9 +1,11 @@
-- 그래프 기본
-- DFS
-- BFS
-- 서로소 집합들
-- 최소 비용 신장 트리(MST)
-- 최단 경로
+# 14_그래프
+
+- [그래프 기본](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/14_Graph.md#%EA%B7%B8%EB%9E%98%ED%94%84)
+- [DFS](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/14_Graph.md#dfs)
+- [BFS](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/14_Graph.md#bfs)
+- [서로소 집합들](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/14_Graph.md#%EC%84%9C%EB%A1%9C%EC%86%8C-%EC%A7%91%ED%95%A9%EB%93%A4)
+- [최소 비용 신장 트리(MST)](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/14_Graph.md#%EC%B5%9C%EC%86%8C-%EC%8B%A0%EC%9E%A5-%ED%8A%B8%EB%A6%ACmst-minimum-spanning-tree)
+- [최단 경로](https://github.com/SuhyungK/TIL/blob/master/3_Algorithm/14_Graph.md#%EC%B5%9C%EC%86%8C-%EC%8B%A0%EC%9E%A5-%ED%8A%B8%EB%A6%ACmst-minimum-spanning-tree)
 
 ## 학습목표
 
