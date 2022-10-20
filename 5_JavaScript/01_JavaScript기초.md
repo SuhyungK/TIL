@@ -1,5 +1,3 @@
-# 35_JavaScript 기초
-
 - JavaScript 시작하기
 - JavaScript 기초 문법
     - JavaScript 문법
@@ -64,7 +62,7 @@
     - V8 엔진을 탑재한 크롬의 등장
         - JavaScript 해석이 다른 웹 브라우저에 비해 월등히 빠름(속도)
         - 크롬이 다른 웹 브라우저들이 표준안을 만들자고 제안…
-    - 2015, ECMAScript6(`ES6`) → JavaScript의 대격변
+- 2015, ECMAScript6(`ES6`) → JavaScript의 대격변
 
 ### 정리
 
@@ -98,7 +96,7 @@
         </html>
         ```
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/21802c8a-432b-4fec-8ce4-5ac9cb45225f/Untitled.png)
+        ![Untitled](.img/js_2.png)
         
     - `.js` 확장자를 가진 파일로 실행시키기
         
@@ -126,7 +124,7 @@
         
     - 웹 브라우저의 콘솔에서 바로 자바스크립트 실행하기
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6cf2af48-06f6-4c9f-be81-d641a1f1dd2b/Untitled.png)
+![Untitled](.img/js_2.png)
 
 - node.js 로 실행시키기
     - 웹 브라우저에서 바로 실행할 수 있는 자바스크립트 문법들을 *Vanilla JavaScript*
@@ -208,7 +206,7 @@
     
     ```jsx
     let foo          // 선언, 변수를 메모리에 생성하는 시점(초기화)
-    console.log(foo) // undefines (값을 선언한 하는 경우)
+    console.log(foo) // undefines (값을 선언만 하는 경우)
     
     foo = 11         // 할당
     
@@ -230,6 +228,13 @@
     console.log(x) // 1
     ```
     
+
+### 변수 선언 키워드
+
+- 기본적으로는 `const` 사용 권장
+- 재할당해야 하는 경우만 `let`
+
+![Untitled](.img/javascript_%EB%B3%80%EC%88%98%ED%82%A4%EC%9B%8C%EB%93%9C.png)
 
 - `let`
     - 재할당 가능 & 재선언 불가능 : 다른 값을 넣는 것 가능
@@ -283,13 +288,6 @@
         - 함수 스코프를 가지는 변수는 함수 바깥에선 접근 불가능
         
 
-### 변수 선언 키워드
-
-- 기본적으로는 `const` 사용 권장
-- 재할당해야 하는 경우만 `let`
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a6958f73-5b26-47af-803e-7356334da692/Untitled.png)
-
 ## 데이터 타입
 
 - *JavaScript*의 모든 값은 특정한 데이터 타입을 가짐
@@ -310,7 +308,7 @@
     1. 숫자로서 읽을 수 없는 경우
     2. 결과가 허수인 경우
     3. 피연산자 (`7 ** NaN`)
-    4. 정의할 수 없는 계산식
+    4. 정의할 수 없는 계산식(`0 * Infinity`)
     5. 문자열을 포함하면서 덧셈이 아닌 계산식(`”가” / 3`)
 
 ### String
@@ -318,20 +316,20 @@
 - 문자열 표현 자료형
 - 작은 따옴표 큰 따옴표 모두 사용 가능
 - 덧셈을 통해 문자열 붙일 수 있음
-    
-    ```jsx
-    const sentence1 = "Ask and go the the blue"
-    const firstName = 'Hi'
-    const lastNumae = 'ssafy'
-    const fullName = firstName + lastName
-    ```
-    
+
+```jsx
+const sentence1 = "Ask and go the the blue"
+const firstName = 'Hi'
+const lastNumae = 'ssafy'
+const fullName = firstName + lastName
+```
+
 - ****Quote**** 사용시 선언 시 줄 바꿈이 안 됨
-    
-    ```jsx
-    const word1 = '안녕\n하세요'
-    ```
-    
+
+```jsx
+const word1 = '안녕\n하세요'
+```
+
 - `Template Literal` 사용하면 줄 바꿈이 되며, 문자열 사이 변수도 삽입 가능
     
     ```jsx
@@ -344,6 +342,13 @@
     - 내장된 표현식 허용하는 문자열 작성 방식
     - Backtick(``) 사용하며 여러 줄에 걸쳐 문자열 정의 가능, 자바스크립트의 변수를 문자열 안에 바로 연결할 수 있는 이점 존재
     - `$ { expression }`
+    - ******object******는 출력 불가 :
+    
+    > *Why are `template strings` not allowed as literal `object` keys?*
+    > 
+    
+    *Template strings are expressions, not literals1. You can only use string literals (and identifiers) for property names, for everything else - that is not known to be static - you need a computed property name.*
+    
 
 ### Empty Value
 
@@ -438,7 +443,7 @@
 ## 조건문
 
 - `if`
-    - 조건 식의 결과를 bllolean 타입으로 변환 후 참/거짓 판단
+    - 조건 식의 결과를 *boolean* 타입으로 변환 후 참/거짓 판단
     
     ```jsx
     const name = 'manager'
@@ -482,57 +487,56 @@
 
 - `while`
     - 조건문이 참이기만 하면 문장 계속해서 수행
-    
-    ```jsx
-    let i = 0
-    
-    while (i < 6) {
-    	console.log(i)
-    	i += 1
-    }
-    
-    // 0, 1, 2, 3, 4, 5
-    ```
-    
+
+```jsx
+let i = 0
+
+while (i < 6) {
+	console.log(i)
+	i += 1
+}
+
+// 0, 1, 2, 3, 4, 5
+```
+
 - `for`
-    
-    ```jsx
-    for ([초기문]; [조건문]; [증감문]) {
-    	// do something
-    }
-    
-    for (let i = 0; i < 6; i++) {
-    	console.log(i)
-    }
-    ```
-    
+
+```jsx
+for ([초기문]; [조건문]; [증감문]) {
+	// do something
+}
+
+for (let i = 0; i < 6; i++) {
+	console.log(i)
+}
+```
+
 - `for...in`
     - 객체(`object`) 속성을 순회할 때 사용
     - 속성 이름을 통해 반복
     - 배열도 순회 가능하나 인덱스 순으로 순회한다는 보장이 없으므로 권장 X
-    
-    ```jsx
-    const fruits = {a : 'apple', b : 'banana'}
-    
-    for (const key in fruits) {
-    	console.log(key) // a, b
-    	console.log(fruits[key]) // apple, banana
-    }
-    ```
-    
+
+```jsx
+const fruits = {a : 'apple', b : 'banana'}
+
+for (const key in fruits) {
+	console.log(key) // a, b
+	console.log(fruits[key]) // apple, banana
+}
+```
+
 - `for...of`
     - 반복 가능한 타입 순회할 때 사용
     - 속성 값을 통해 반복
     - 어차피 객체에서 동작 안 함
-    
-    ```jsx
-    const numbers = [0, 1, 2, 3]
-    
-    for (const number of numbers) {
-    	console.log(number)
-    }
-    ```
-    
+
+```jsx
+const numbers = [0, 1, 2, 3]
+
+for (const number of numbers) {
+	console.log(number) // 0 1 2 3 
+}
+```
 
 - `for...in` 과 `for...of`의 차이
     - 배열은 내부적으로 객체
@@ -540,50 +544,49 @@
     - `of` ⇒ 나머지
     - `const` 사용 가능 :  재할당이 아니라 매 반복 시 해당 변수를 새로 정의하여 사용하므로 재할당 에러 X
     - 다만 일반 `for`문은 `for (**let** i = 0; i < arr.length; i ++)` 사용
-    
-    ```jsx
-    const arr = [3, 5, 7]
-    // {0: 3, 1: 5, 2: 7}
-    
-    for (const i in arr) {
-    	console..log(i) // 0 1 2 
-    }
-    
-    for (const i of arr) {
-    	console.log(i) // 3 5 7
-    }
-    ```
-    
-    ```jsx
-    const fruits = ['딸기', '바나나', '메론']
-    
-    const capitals = {
-    	Korea : '서울', 
-    	France : '프랑스', 
-    	USA : '워싱턴'
-    }
-    
-    // for ... in  객체 순환만 가능
-    for (let fruit in fruits) { // 배열도 순환 가능하나 권장 X
-    	console.log(fruit) // 0, 1, 2
-    }
-    
-    for (let capital in capitals) {
-    	console.log(capital) // Korea, France, USA
-    	console.log(capitals[capital]) // 서울, 프랑스, 워싱턴
-    }
-    
-    // for ... of
-    for (let fruit of fruits) {
-    	console.log(fruit) // 딸기, 바나나, 메론
-    }
-    
-    for (let capital in capitals) {
-    	console.log(capital)
-    	// Uncaught TypeError : capitals is not iterable
-    }
-    ```
-    
+
+```jsx
+const arr = [3, 5, 7]
+// {0: 3, 1: 5, 2: 7}
+
+for (const i in arr) {
+	console.log(i) // 0 1 2 
+}
+
+for (const i of arr) {
+	console.log(i) // 3 5 7
+}
+```
+
+```jsx
+const fruits = ['딸기', '바나나', '메론']
+
+const capitals = {
+	Korea : '서울', 
+	France : '프랑스', 
+	USA : '워싱턴'
+}
+
+// for ... in  객체 순환만 가능
+for (let fruit in fruits) { // 배열도 순환 가능하나 권장 X
+	console.log(fruit) // 0, 1, 2
+}
+
+for (let capital in capitals) {
+	console.log(capital) // Korea, France, USA
+	console.log(capitals[capital]) // 서울, 프랑스, 워싱턴
+}
+
+// for ... of
+for (let fruit of fruits) {
+	console.log(fruit) // 딸기, 바나나, 메론
+}
+
+for (let capital in capitals) {
+	console.log(capital)
+	// Uncaught TypeError : capitals is not iterable
+}
+```
 
 ## 함수
 
@@ -630,7 +633,7 @@
         return 0
     }
     
-    console.log(noArgs(1, 2, 3))
+    console.log(noArgs(1, 2, 3)) // 0
     
     const twoArgs = function (arg1, arg2) {
         return [arg1, arg2]
@@ -650,87 +653,213 @@
     - 전개 구문
     - 전개 구문을 사용하면 배열이나 문자열과 같이 반복 가능한 객체를 배열의 경우는 요소, 함수의 경우는 인자로 확장 가능
     1. 배열과의 사용
-        
-        ```jsx
-        let part = ['shoulders', 'knees']
-        let lyrics = ['head', ...part, 'and', 'toes']
-        
-        console.log(lyrics)
-        ```
-        
-    2. 함수와의 사용
+    
+    ```jsx
+    let part = ['shoulders', 'knees']
+    let lyrics = ['head', ...part, 'and', 'toes']
+    
+    console.log(lyrics) // ['head', 'shoulders', 'knees', 'and', 'toes']
+    ```
+    
+    1. 함수와의 사용( **************Rest parameters************** )
         - 정해지지 않은 수의 매개변수 배열로 받을 수 있음
-        - 애스터리스크(`*`)
-        
-        ```jsx
-        const rest0pr = function (arg1, arg2, ...restArgs) {
-            return [arg1, arg2, restArgs]
-        }
-        
-        console.log(rest0pr(1, 2, 3, 4, 5)) // [ 1, 2, [ 3, 4, 5 ] ]
-        ```
-        
+        - 애스터 리스크(`*`)
+    
+    ```jsx
+    const restOpr = function (arg1, arg2, ...restArgs) {
+        return [arg1, arg2, restArgs]
+    }
+    
+    console.log(restOpr(1, 2, 3, 4, 5)) // [ 1, 2, [ 3, 4, 5 ] ]
+    ```
     
 
 ### 선언식과 표현식
 
 - 선언식 함수와 표현식 함수 모두 타입은 `function`
-- 호이스팅 - 선언식
+- 호이스팅O - 선언식
     - 함수 선언식으로 정의한 함수는 `var`로 정의한 변수처럼 호이스팅 발생
     - 함수 호출 이후에 선언해도 동작
-        
-        ```jsx
-        console.log(add(2, 7))
-        
-        function add(num1, num2) {
-            return num1 + num2
-        }
-        ```
-        
-- 호이스팅 - 표현식 ← 권장!
+    
+    ```jsx
+    console.log(add(2, 7))
+    
+    function add(num1, num2) {
+        return num1 + num2
+    }
+    ```
+    
+- 호이스팅X - 표현식 ← 권장!
     - 정의된 함수가 변수로 평가되기 때문에 변수의 스코프 규칙을 따라서 호이스팅 에러 없음
+    
+    ```jsx
+    const sub = function (num1, num2) {
+    	return num1 - num2
+    }
+    ```
     
 
 ## Arrow Function
 
 - 함수를 비교적 간결하게 정의할 수 있는 문법
 - ********function********키워드와 중괄호를 이용한 구문을 짧게 사용하기 위해 탄생
-    - ********function********키워드 생략 가능
+    - ********`function`* 키워드 생략 가능
     - 함수의 매개변수가 하나뿐이라면 `()`도 생략 가능
     - 함수의 내용이 한 줄 이라면 `{}` `return` 생략 가능
 - 함수 표현식에서만 사용 가능
 - 명확성과 일관성을 위하 항상 인자 주위에는 괄호사용 권장
+
+```jsx
+const greeting = function (name) {
+    return `Hi, ${name}`
+}
+
+// 1단계 -> 가장 많이 보이는 코드
+const greeting = (name) => {
+    return `Hi, ${name}`
+}
+
+// 2단계
+const greeting = name => {
+    return  `Hi, ${name}`
+}
+
+// 3단계
+const greeting = name => `Hi, ${name}`
+```
+
+```jsx
+// 인자가 없는 경우 () or _ 로 표시 가능
+let noArgs = () => 'No args'
+
+// obejct 를 return 한다면 return 반드시 써야함
+let returnObject = () => { return {key : 'value'} }
+
+// return 적지 않으려면
+returnoObject = () => ({key : 'value'})
+```
+
+## arrow function + this.
+
+[[자바스크립트] this의 개념과 활용법](https://kim-solshar.tistory.com/42)
+
+- 자바스크립트의 `this` 동작 원리 분류
+    - 함수 실행
+    - 메소드(함수 내부의) 실행
+    - 생성자 실행
+    - 간접 실행
+- 실행 문맥 : 함수가 생성될 때가 아닌 함수가 실행될 때를 가리킨다.
+
+- arrow function에서의 `this`
+    - **************arrow function**************에서의 `this`는 자신을 둘러싸고 있는 상위 환경의 `this`를 그대로 상속받게 된다. 즉, 함수가 선언될 때가 아니라 함수가 실행될 때의 위치를 기준으로 여기서는 전역객체를 상속받게 되기 때문에 window.name이 할당되어 있지 않으면 `undefined` 처리가 된다.
+    - 전역변수의 `name`를 따로 지정해주게 되면 결과값이 출력됨
     
     ```jsx
-    const greeting = function (name) {
-        return `Hi, ${name}`
+    var person = {
+        name : 'Lee',
+        sayHi : () => console.log(`Hi ${this.name}`)
     }
     
-    // 1단계 -> 가장 많이 보이는 코드
-    const greeting = (name) => {
-        return `Hi, ${name}`
+    person.sayHi() // Hi, because this == Window, so name is undefined
+    ```
+    
+    - `foo2` 함수가 실행될 때 상위 환경이 메서드(`foo1:function()`)이기 때문에 메서드를 소유하고 있는 객체를 가리키게 됨
+    
+    ```jsx
+    const cat = {
+      name: 'meow',
+      foo1: function() {
+        const foo2 = () => {
+          console.log(this.name);
+        }
+        foo2();
+      }
+    };
+    
+    cat.foo1();	// meow
+    ```
+    
+
+- 함수 실행에서의 `this`
+    - 함수 실행에서 `this`는 전역 객체를 가리킨다
+    
+    ```jsx
+    function add(a + b) {
+    	console.log(this == window)
     }
     
-    // 2단계
-    const greeting = name => {
-        return  `Hi, ${name}`
+    // true
+    ```
+    
+    - 메서드 내에서 실행돼도 메서드가 실행된 게 아니라 메서드 내부의 함수가 실행됐기 때문에 `this`는 전역 객체
+    
+    ```jsx
+    const cat = {
+      name: 'meow',
+      foo1: function() {
+        const foo2 = function() {
+          console.log(this.name);
+        }
+        foo2();
+      }
+    };
+    
+    cat.foo1();	// undefined
+    ```
+    
+
+- 메서드 실행에서의 `this`
+    - 메서드 실행에서 `this`는 메서드를 소유하고 있는 객체를 가리킨다
+    
+    ```jsx
+    var myObject = {
+        myMethod : function () {
+            return typeof this
+        }
     }
     
-    // 3단계
-    const greeting = name => `Hi, ${name}`
+    myObject.myMethod()
+    // 'object'
     ```
     
     ```jsx
-    // 인자가 없는 경우 () or _ 로 표시 가능
-    let noArgs = () => 'No args'
+    var calc = {
+        num : 0,
+        increment : function() {
+            console.log(this == calc)
+            this.num += 1
+            return this.num
+        }
+    }
     
-    // obejct 를 return 한다면 return 반드시 써야함
-    let returnObject = () => { return {key : 'value'} }
-    
-    // return 적지 않으려면
-    returnoObject = () => ({key : 'value'})
+    calc.increment()
+    true
+    1
+    calc.increment()
+    true
+    2
     ```
     
+    - 메서드 내부에서  `this` 는 전역객체가 아니다
+    
+    ```jsx
+    var calc = {
+        num : 0,
+        increment : function() {
+            console.log(this == calc)
+            **console.log(this == window)**
+            this.num += 1
+            return this.num
+        }
+    }
+    
+    calc.increment()
+    true
+    **false**
+    ```
+    
+
+[[JavaScript] 화살표 함수와 this 바인딩](https://velog.io/@padoling/JavaScript-%ED%99%94%EC%82%B4%ED%91%9C-%ED%95%A8%EC%88%98%EC%99%80-this-%EB%B0%94%EC%9D%B8%EB%94%A9)
 
 ### 즉시 실행 함수
 
@@ -739,21 +868,20 @@
 - 특정 부분에서 값을 초기화하거나 일회성으로 사용
 - 함수의 선언 끝에 괄호를 추가하여 선언되자 마자 실행하는 형태
 - 괄호에 값을 넣어 인자로 넘겨줄 수 있음
-    
-    ```jsx
-    (function(num) {return num ** 3})(2) // 8
-    
-    (num => num ** 3)(2) // 8
-    ```
-    
-    ```jsx
-    function (num) { return num ** 3}
-    
-    (num) => {return num ** 3}
-    
-    console.log(((num) => num ** 3) (2))
-    ```
-    
+
+```jsx
+(function(num) {return num ** 3})(2) // 8
+
+(num => num ** 3)(2) // 8
+```
+
+```jsx
+function (num) { return num ** 3}
+
+(num) => {return num ** 3}
+
+console.log(((num) => num ** 3) (2))
+```
 
 ## Array와 Object
 
@@ -809,17 +937,16 @@ console.log(numbers.join(' ')) // 5 4 3 2 1
 ## 배열 메서드 심화
 
 - *Array Helper Methods*
-    
-    
-    | 메서드 | 설명 | 비고 |
-    | --- | --- | --- |
-    | forEach | 배열의 각 요소에 대해 콜백 함수를 한 번씩 실행 | 반환 값 없음 |
-    | map | 콜백 함수의 반환 값을 요소로 하는 새로운 배열 반환 |  |
-    | filter | 콜백 함수의 반환 값이 참인 요소들만 모아 새로운 배열을 반환 |  |
-    | reduce | 콜백 함수의 반환 값들을 하나의 값(acc)에 누적 후 반환 |  |
-    | find | 콜백 함수의 반환 값이 참이면 해당 요소 반환 |  |
-    | some | 배열의 요소 중 하나라도 판별 함수를 통과하면 참을 반환 |  |
-    | every | 배열의 모든 요소가 판별 함수를 통과하면 참을 반환 |  |
+
+| 메서드 | 설명 | 비고 |
+| --- | --- | --- |
+| forEach | 배열의 각 요소에 대해 콜백 함수를 한 번씩 실행 | 반환 값 없음 |
+| map | 콜백 함수의 반환 값을 요소로 하는 새로운 배열 반환 |  |
+| filter | 콜백 함수의 반환 값이 참인 요소들만 모아 새로운 배열을 반환 |  |
+| reduce | 콜백 함수의 반환 값들을 하나의 값(acc)에 누적 후 반환 |  |
+| find | 콜백 함수의 반환 값이 참이면 해당 요소 반환 |  |
+| some | 배열의 요소 중 하나라도 판별 함수를 통과하면 참을 반환 |  |
+| every | 배열의 모든 요소가 판별 함수를 통과하면 참을 반환 |  |
 - 배열을 순회하며 특정 로직을 순회하는 메서드
 - 메서드 호출 시 인자로 `callback` 함수 받는 것이 특징
     - 어떤 함수 내부에서 실행될 목적으로 인자로 넘겨받는 함수
@@ -827,84 +954,83 @@ console.log(numbers.join(' ')) // 5 4 3 2 1
 ### forEach
 
 - 인자로 주어지는 함수(콜백 함수)를 배열의 각 요소에 대해 한 번씩 실행
-    
-    ```jsx
-    array.forEach(elemnet, index, array) => {
-    	//do something
-    }
-    ```
-    
-    ```jsx
-    // 1.
-    const colors = ['red', 'blue', 'green']
-    
-    const printClr = function (color) {
-        console.log(color)
-    }
-    
-    colors.forEach(printClr)
-    
-    // 2. python의 map과 동작하는 원리 비슷
-    colors.forEach(function (color) {
-        console.log(color)
-    })
-    
-    **// 3. 자바스크립트에서 가장 많이 사용되는 구조
-    colors.forEach((color) => {
-        console.log(color)
-    })**
-    ```
-    
+
+```jsx
+array.forEach(element, index, array) => {
+	//do something
+}
+```
+
+```jsx
+// 1.
+const colors = ['red', 'blue', 'green']
+
+const printClr = function (color) {
+    console.log(color)
+}
+
+colors.forEach(printClr)
+
+// 2. python의 map과 동작하는 원리 비슷
+colors.forEach(function (color) {
+    console.log(color)
+})
+
+**// 3. 자바스크립트에서 가장 많이 사용되는 구조
+colors.forEach((color) => {
+    console.log(color)
+})**
+```
 
 ### map
 
 - `forEach + return`
-    
-    ```jsx
-    const number = [1, 2, 3, 4, 5]
-    
-    const doubleEle = function (number) {
-        return number * 2
-    }
-    
-    const newArry = number.map((number) => {
-        return number * 2
-    })
-    
-    const newArry = number.map((number) => number * 2)
-    
-    console.log(newArry)
-    ```
-    
+
+```jsx
+const number = [1, 2, 3, 4, 5]
+
+const doubleEle = function (number) {
+    return number * 2
+}
+
+const newArry = number.map((number) => {
+    return number * 2
+})
+
+const newArry = number.map((number) => number * 2)
+
+console.log(newArry)
+```
 
 ### filter
 
 - `map + True인 값만 반환`
 - 콜백 함수의 반환 값이 참인 요소들만 모아서 새로운 배열 반환
-    
-    ```jsx
-    const products = [
-        { name: 'cucumber', type: 'vegetable' },
-        { name: 'banana', type: 'fruit' },
-        { name: 'carrot', type: 'vegetable' },
-        { name: 'apple', type: 'fruit' },
-    ]
-    
-    // 1.
-    const fruitFilter = function (product) {
-        return product.type === 'fruit'
-    }
-    
-    // 2.
-    const newArry = products.filter((product) => {
-        return product.type === 'fruit'
-    })
-    
-    const newArry = products.filter(fruitFilter)
-    
-    console.log(newArry) // [ { name: 'banana', type: 'fruit' }, { name: 'apple', type: 'fruit' } ]
-    ```
-    
+
+```jsx
+const products = [
+    { name: 'cucumber', type: 'vegetable' },
+    { name: 'banana', type: 'fruit' },
+    { name: 'carrot', type: 'vegetable' },
+    { name: 'apple', type: 'fruit' },
+]
+
+// 1. 함수 정의하고
+const fruitFilter = function (product) {
+    return product.type === 'fruit'
+}
+// 콜백으로 넘기기
+const fruits = products.Filter(fruitFilter)
+
+// 2. 함수 정의를 인자로 넣어보기
+const newArry = products.filter((product) => {
+    return product.type === 'fruit'
+})
+
+const newArry = products.filter(fruitFilter)
+
+console.log(newArry) // [ { name: 'banana', type: 'fruit' }, { name: 'apple', type: 'fruit' } ]
+```
 
 ### reduce
 
@@ -914,49 +1040,72 @@ console.log(numbers.join(' ')) // 5 4 3 2 1
 - 주요 매개변수
     - `acc` : 이전 함수의 반환 값이 누적되는 변수 값
     - `initialValue (optional)` : 최초의 초기값, 배열이 빈 배열이면 에러 발생, 디폴트 값은 배열의 첫 번째 값
-    
-    ```jsx
-    array.reduce((acc, element, index, array) => {
-    	// do something
-    }, initialValue)
-    ```
-    
-    ```jsx
-    const numbers = [90, 80, 70, 100]
-    
-    // 총합
-    const sumNum = numbers.reduce(function (result, number) {
-        return result + number // return 값이 다음 result 값에 들어감(누적)
-    })
-    
-    console.log(sumNum) // 340
-    
-    // 평균
-    const avgNum = numbers.reduce((result, number) => result + number, 0) / numbers.length
-    ```
-    
+
+```jsx
+array.reduce(callback(acc, element, [index[, array]]), [, initialValue]) => {
+	// do something
+}, initialValue)
+```
+
+```jsx
+const numbers = [90, 80, 70, 100]
+
+// 총합
+const sumNum = numbers.reduce(function (result, number) {
+    return result + number // return 값이 다음 result 값에 들어감(누적)
+})
+
+console.log(sumNum) // 340
+
+// 평균
+const avgNum = numbers.reduce((result, number) => result + number, **0**) / numbers.length
+```
+
+- `initialValue` 값 대입
+
+```jsx
+var arr = []
+
+const sumNum = numbers.reduce(function (result, number) {
+    return result + number // return 값이 다음 result 값에 들어감(누적)
+}, 0)
+```
+
+```jsx
+// 1. 배열에 담긴 중복된 이름을 {'이름': 수} 형태의 object로 반환하세요.
+
+const names = ['harry', 'aiden', 'julie', 'julie', 'edward']
+
+// answer
+const multiNames = names.reduce((acc, name) => {
+	  console.log('acc', acc, 'name', name)
+	  acc[name] = acc[name] ? acc[name] + 1 : 1 
+	  return acc
+}, {})
+
+console.log('result', multiNames)
+```
 
 ### find
 
 - 콜백 함수의 반환 값이 참이면, 조건을 만족하는 첫번째 요소를 반환
 - 찾는 값이 배열에 없으면 `undefined` 반환
-    
-    ```jsx
-    const avengers = [
-        {name : 'Tony Stark', age: 45}, 
-        {name : 'Steve Rogers', age: 32}, 
-        {name : 'Thor', age: 40}, 
-    ]
-    
-    const avenger = avengers.find((avenger) => {
-        return avenger.name === 'Tony Stark' // 결과가 참이면 그 값 자체를 반환
-    })
-    
-    console.log(avenger)
-    
-    //{ name: 'Tony Stark', age: 45 }
-    ```
-    
+
+```jsx
+const avengers = [
+    {name : 'Tony Stark', age: 45}, 
+    {name : 'Steve Rogers', age: 32}, 
+    {name : 'Thor', age: 40}, 
+]
+
+const avenger = avengers.find((avenger) => {
+    return avenger.name === 'Tony Stark' // 결과가 참이면 그 값 자체를 반환
+})
+
+console.log(avenger)
+
+//{ name: 'Tony Stark', age: 45 }
+```
 
 ### some
 
@@ -986,26 +1135,25 @@ const newResult = arr.every((elem) => (elem) % 2 === 0) // false
     - 인덱스 없이 배열의 요소에 바로 접근 가능
 - `forEach` → 가장 1순위
     - `break`, `continue` 사용 안 됨
-    
-    ```jsx
-    const chars = ['A', 'B', 'C', 'D']
-    
-    // for loop
-    for (let idx = 0; idx < chars.length; idx++) {
-        console.log(idx, chars[idx])
-    }
-    
-    // for... of
-    for (const char of chars) {
-        console.log(char)
-    }
-    
-    // forEach
-    chars.forEach((char, idx) => {
-        console.log(idx, char)
-    })
-    ```
-    
+
+```jsx
+const chars = ['A', 'B', 'C', 'D']
+
+// for loop
+for (let idx = 0; idx < chars.length; idx++) {
+    console.log(idx, chars[idx])
+}
+
+// for... of
+for (const char of chars) {
+    console.log(char)
+}
+
+// forEach
+chars.forEach((char, idx) => {
+    console.log(idx, char)
+})
+```
 
 ## 객체
 
@@ -1014,26 +1162,25 @@ const newResult = arr.every((elem) => (elem) % 2 === 0) // false
 - `value`는 모든 타입 가능
 - 객체의 요소 접근은 점(`.`)또는 대괄호(`[]`)로 가능
     - key 이름이 띄어쓰기가 있으면 대괄호로만 접근 가능
-    
-    ```jsx
-    const myInfo = {
-        name : 'jack', 
-        phoneNumber : '123456', 
-        'samsung product' : {
-            buds: 'Buds pro', 
-            galaxy : 'S99', 
-        },
-    }
-    
-    // 동일한 값 접근
-    console.log(myInfo.name)
-    console.log(myInfo['name'])
-    
-    // 띄어쓰기가 있으면 .으로는 접근 불가/대괄호만 가능
-    console.log(myInfo['samsung product'])
-    console.log(myInfo['samsung product'].galaxy)
-    ```
-    
+
+```jsx
+const myInfo = {
+    name : 'jack', 
+    phoneNumber : '123456', 
+    'samsung product' : {
+        buds: 'Buds pro', 
+        galaxy : 'S99', 
+    },
+}
+
+// 동일한 값 접근
+console.log(myInfo.name)
+console.log(myInfo['name'])
+
+// 띄어쓰기가 있으면 .으로는 접근 불가/대괄호만 가능
+console.log(myInfo['samsung product'])
+console.log(myInfo['samsung product'].galaxy)
+```
 
 ## 객체 관련 문법
 
@@ -1077,6 +1224,24 @@ const obj = {
         console.log('')
     }
 }
+```
+
+```jsx
+var obj = {
+    name : 'Name',
+    greeting() {
+        console.log(this.name)
+    }
+}
+obj.greeting() // Name
+
+var obj = {
+    name : 'Name',
+    greeting: () => {
+        console.log(this.name)
+    }
+}
+obj.greeting() // undefined
 ```
 
 ### 계산된 속성
@@ -1156,3 +1321,5 @@ console.log(typeof jsonToObj) //object
 
 - 배열은 키와 속성들을 담고 있는 참조 타입의 객체
 - 인덱스를 키로 가지며  `length` 프로퍼티를 갖는 특수한 객체
+
+![Untitled](.img/javascript_마지막.png)
