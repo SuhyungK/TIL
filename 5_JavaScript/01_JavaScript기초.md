@@ -96,7 +96,7 @@
         </html>
         ```
         
-        ![Untitled](.img/js_2.png)
+        ![Untitled](.img/01_1.png)
         
     - `.js` 확장자를 가진 파일로 실행시키기
         
@@ -124,7 +124,7 @@
         
     - 웹 브라우저의 콘솔에서 바로 자바스크립트 실행하기
 
-![Untitled](.img/js_2.png)
+![Untitled](.img/01_2.png)
 
 - node.js 로 실행시키기
     - 웹 브라우저에서 바로 실행할 수 있는 자바스크립트 문법들을 *Vanilla JavaScript*
@@ -234,7 +234,7 @@
 - 기본적으로는 `const` 사용 권장
 - 재할당해야 하는 경우만 `let`
 
-![Untitled](.img/javascript_%EB%B3%80%EC%88%98%ED%82%A4%EC%9B%8C%EB%93%9C.png)
+![Untitled](.img/01_%EB%B3%80%EC%88%98%ED%82%A4%EC%9B%8C%EB%93%9C.png)
 
 - `let`
     - 재할당 가능 & 재선언 불가능 : 다른 값을 넣는 것 가능
@@ -1322,4 +1322,4 @@ console.log(typeof jsonToObj) //object
 - 배열은 키와 속성들을 담고 있는 참조 타입의 객체
 - 인덱스를 키로 가지며  `length` 프로퍼티를 갖는 특수한 객체
 
-![Untitled](.img/javascript_마지막.png)
+![Untitled](.img/01_%EB%A7%88%EC%A7%80%EB%A7%89.png)
